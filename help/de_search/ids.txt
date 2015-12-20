@@ -1,0 +1,27 @@
+1
+ The Sorter
+ the_sorter.htm
+2
+ О программе
+ o_programme.htm
+3
+ Работа с программой
+ rabota_s_programmoj.htm
+4
+ Выбор файла для конвертации
+ vybor_fajla_dlya_konvertatsii.htm
+5
+ Отображение гистограммы
+ otobrazhenie_gistogrammy.htm
+6
+ Сортировка вставками
+ sortirovka_vstavkami.htm
+7
+ Быстрая сортировка
+ bystraya_sortirovka.htm
+8
+ Системные требования
+ sistemnye_trebovaniya.htm
+9
+ О разработчике
+ o_razrabotchike.htm

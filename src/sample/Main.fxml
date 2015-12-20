@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane prefHeight="359.0" prefWidth="567.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <right>
+        <VBox prefHeight="321.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+            <Region prefHeight="75.0" prefWidth="100.0" />
+                <Button mnemonicParsing="false" onAction="#ShowArr" text="Show array" />
+                <Region prefHeight="68.0" prefWidth="100.0" />
+                <SplitMenuButton mnemonicParsing="false" text="SplitMenuButton">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#InsertSort" text="Insertion Sort" />
+                        <MenuItem mnemonicParsing="false" onAction="#Quicksort" text="Quick Sort" />
+                    </items>
+                </SplitMenuButton>
+                <Region prefHeight="75.0" prefWidth="100.0" />
+                <TextField fx:id="arr" />
+                <Region prefHeight="70.0" prefWidth="100.0" />
+                <Label text="Time:" />
+                <Label fx:id="time" text="0" />
+                <Label text="Quantity of steps" />
+                <Label fx:id="qsteps" text="0" />
+                <Region prefHeight="200.0" prefWidth="200.0" />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="4.0" left="5.0" right="9.0" top="3.0" />
+            </BorderPane.margin>
+        </VBox>
+    </right>
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#Exit" text="Close" />
+                        <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#Help" text="Reference" />
+               </items>
+                </Menu>
+            <Menu mnemonicParsing="false" text="Step by Step">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#insertionSortSteps" text="Insertion Sort" />
+                  <MenuItem mnemonicParsing="false" text="Quick Sort" />
+               </items>
+            </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <ScrollPane fx:id="scrollPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
