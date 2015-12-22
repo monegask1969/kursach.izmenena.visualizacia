@@ -19,11 +19,11 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
         primaryStage.setTitle("The Sorter");
         primaryStage.setScene(new Scene(root, 611, 400));
+        primaryStage.getScene().getStylesheets().add("C:\\Users\\Макс\\IdeaProjects\\grebaniykursach\\src\\css\\2.css");
         primaryStage.show();
     }
 
 
-    public static void main(String[] args) {
-        launch(args);
+    public static void main(String[] args) {launch(args);
     }
 }

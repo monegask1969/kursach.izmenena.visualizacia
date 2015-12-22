@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
@@ -43,37 +44,12 @@ public class Controller {
     private Label qsteps;
 
     @FXML
-    void About() throws Exception {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("About.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    @FXML
-    void Manual() throws Exception {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Manual.fxml"));
-            Parent root1 = (Parent) fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    @FXML
     void Exit() {
         Platform.exit();
     }
+
+    @FXML
+    private Button showarray;
 
     @FXML
     public void InsertSort() {
@@ -140,4 +116,5 @@ public class Controller {
             ex.printStackTrace();
         }
     }
+
 }

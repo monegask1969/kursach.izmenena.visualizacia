@@ -1,24 +1,36 @@
 package sample;
 
+import com.sun.javafx.geom.RoundRectangle2D;
+import com.sun.javafx.jmx.HighlightRegion;
+import javafx.scene.effect.Blend;
+import javafx.scene.effect.Bloom;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.StrokeLineCap;
 
 public class ShowBytes {
     public static Rectangle[] rectangles(byte[] array, int length) {
         if (length > array.length) throw new ArrayIndexOutOfBoundsException();
-        final int width = 5;
-        Rectangle[] rect = new Rectangle[array.length];
-        for (int i = 0, j = 10; i < rect.length; i++, j+=width) {
-            rect[i] = new Rectangle();
+        final int width = 20;
+        Rectangle[] rec = new Rectangle[array.length];
+        for (int i = 0, j = 20; i < rec.length; i++, j+=width) {
+            rec[i] = new Rectangle();
             if (array[i] < 0){
-                rect[i].setHeight(Math.abs(array[i]));
-                rect[i].setY(200);
+                rec[i].setHeight(Math.abs(array[i]));
+                rec[i].setY(200);
+                rec[i].setFill(Color.RED);
+                rec[i].setStroke(Color.RED);
             } else {
-                rect[i].setHeight(array[i]);
-                rect[i].setY(200 - array[i]);
+                rec[i].setHeight(array[i]);
+                rec[i].setY(200 - array[i]);
+                rec[i].setStroke(Color.GREEN);
+                rec[i].setFill(Color.GREEN);
+                rec[i].setStrokeLineCap(StrokeLineCap.ROUND);
             }
-            rect[i].setWidth(5);
-            rect[i].setX(j);
+            rec[i].setWidth(10);
+            rec[i].setX(j);
         }
-        return rect;
+        return rec;
     }
 }
